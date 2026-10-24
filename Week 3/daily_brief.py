@@ -34,7 +34,9 @@ else:
             text = ""
 
             for article in articles[:5]:
+                summary = article.get("description") or "No summary available."
                 text += f"Title: {article['title']}\n"
+                text += f"Summary: {summary}\n"
                 text += f"Source: {article['source']['name']}\n"
                 text += f"URL: {article['url']}\n\n"
 
